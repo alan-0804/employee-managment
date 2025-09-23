@@ -127,6 +127,25 @@ function formatData(input) {
     const [yyyy, mm, dd] = input.split("-");
     return `${dd}-${mm}-${yyyy}`;
 }
+
+function attachMoreButtonEvents() {
+    document.querySelectorAll(".more-button").forEach(button => {
+        button.addEventListener("click",function(e){
+            e.stopPropagation();
+            const menu = this.nextElementsibiling;
+
+            document.querySelectorAll("dropdown-menu").forEach(dropdown => {
+                if(dropdown !==menu)dropdown.classList.remove("show");
+            });
+            menu.classList.toggle("show")
+        });
+    });
+    document.addEventListener("click",() => {
+        document.querySelectorAll(".dropdown-menu").forEach(dropdown =>{
+            dropdown.classList.remove("show");
+        })
+    })
+}
 document.getElementById("addemployeebtn").addEventListener("click",() => {
 
     const employeeData={
@@ -197,5 +216,46 @@ function formatData2(input) {
     const [dd, mm, yyyy] = input.split("-");
     return `${yyyy}-${mm}-${dd}`;
 }
+document.getElementById("editclosebtn").addEventListener("click",editformclose);
+document.getElementById("editcancelbtn").addEventListener("click",editformclose);
+
+document.getElementById("savebtn").addEventListener("click",(e)=>{
+    e.preventDefault();
+
+    const employeeId = e.target.getAttribute("data.id");
+
+    const updatedata={
+        salutation:document.getElementById("edit-salutation").value,
+        firstName:document.getElementById("edit-firstname").value,
+        lastName:document.getElementById("edit-lastname").value,
+        email:document.getElementById("edit-email").value,
+       phone:document.getElementById("edit-num").value, 
+        dob:formatData(document.getElementById("edit-dob").value),
+        gender:document.querySelector(`input[name="edit-gender"]:checked`)?.value ||"",
+        qualifications:document.getElementById("edit-course").value,
+        address:document.getElementById("edit-addres").value,
+        country:document.getElementById("edit-country").value,
+        state:document.getElementById("edit-state").value,
+        city:document.getElementById("edit-city").value,
+        pin:document.getElementById("edit-pin").value,
+
+        username: "user",
+        password: "default123"
+
+    }
+    fetch(`http://localhost:3000/employees/${employeeId}`,{
+        metdod:"PUT",
+        header:{"Content-type":"application/json"},
+        body:JSON.stringify(updatedata)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+
+        editformclose();
+        getEmployees();
+    })
+    .catch(error => console.error("Error:",error));
+})
 })
 });
