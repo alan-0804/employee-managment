@@ -1,0 +1,72 @@
+.sidebar{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top:0px;
+    width:145px;
+    background-color:rgb(29, 29, 106);
+    
+    color: white;
+    font-family: Roboto,arial;
+}
+.heading{
+    margin-top: 20px;
+    margin-left: 10px;
+    
+   
+
+}
+.heading2{
+    margin-top: -20px;
+    margin-left: 10px;
+    font-weight: 200;
+    padding-bottom: 20px;
+
+   
+    
+    
+}
+.sidebar-links{
+    
+    font-size: small;
+    
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+
+}
+.logout-icon{
+    height:20px;
+    margin-right: 5px;
+}
+.dashborad-icon{
+    height: 20px;
+    
+    margin-right: 5px;
+    
+}
+.employee-icon{
+    height: 20px;
+    margin-right: 5px;
+}
+.profile-icon{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    
+}
+
+.sidebar-links:hover{
+    background-color: rgba(243,241,241,0.315);
+    color: rgb(255,255,255);
+    font-size: bold;
+    border-radius: 15px;
+    border-color: black;
+    border-left: 50px;
+    opacity: 0.6;
+}

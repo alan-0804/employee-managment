@@ -1,0 +1,221 @@
+.empdetails-bg{
+ border-width: 0px;
+ border-style: solid;
+ margin-left: 350px;
+ margin-right: 200px;
+ margin-top: 100px;
+ margin-bottom: 100px;
+ position: relative;
+ background-color: white;
+ border-radius: 30px;
+ box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+ font-family:Roboto;
+
+}
+.empdetails{
+    visibility: hidden;
+    position:absolute;
+    top: 20px;
+    bottom:auto;
+    right: auto;
+    left: auto;
+  
+    z-index: 12;
+
+  
+}
+.bg-pic-edit{
+    width:545px;
+    height: 150px;
+    margin-left: 35px;
+    margin-top: 30px;
+    position: relative;
+    border-radius: 10px;
+}
+.profile-pic-edit{
+    width: 100px;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    top: 125px;
+    margin-left:-325px;
+}
+.name{ 
+    font-size: 20px;
+    color: rgb(72, 72, 72);
+    margin-left:210px;
+    margin-top: 75px;
+    font-weight: 500;
+
+}
+.email{
+    font-size: 18px;
+    color: rgb(121, 119, 119);
+    margin-left: 220px;
+    margin-top: 10px;
+
+
+}
+.degenderbox{
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 40px;
+    margin-left: 35px;
+    width: 170px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    display: inline-block;
+    height: 90px;
+}
+.boxheader{
+    margin-left: 10px;
+    color: rgb(116, 115, 115);
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.detail{
+    font-size: 14px;
+    margin-left: 12px;
+    font-weight: 400;
+}
+.deagebox{
+    border-radius:15px ;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 170px;
+    height: 90px;
+    display: inline-block;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 10px;
+}
+.dedobbox{
+     border-radius:15px ;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 170px;
+    height: 90px;
+    display: inline-block;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 10px;
+}
+.denumbox{
+     border-radius:15px ;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 260px;
+    height: 90px;
+    display: inline-block;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 35px;
+    margin-top: 15px;
+}
+.dequalificationbox{
+     border-radius:15px ;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 260px;
+    height: 90px;
+    display: inline-block;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 20px;
+}
+.deaddressbox{
+     border-radius:15px ;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 260px;
+    height: 90px;
+    display: inline-block;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 35px;
+    margin-top:15px;
+}
+.deusernamebox{
+     border-radius:15px ;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 260px;
+    height: 90px;
+    display: inline-block;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 20px;
+    
+}
+.delete{
+    background-color:red;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-size: 14px;
+    border-radius: 12px;
+    border-width: 0px;
+    margin-left:350px ;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.edit{ background-color:rgb(23, 16, 210);
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-size: 14px;
+    border-radius: 12px;
+    border-width: 0px;
+    margin-left:10px 
+
+}
+.action-btn{
+    width: 100px;
+    border-width: 0px;
+}
+.morebutton{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+.more_button {
+    background-color: #f0f0f0;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.more_button:hover{
+    background-color: #838282;
+}
+.dropdown-menu{
+    display: none;
+    position:absolute;
+    background-color: #fff;
+   border-radius: 5px;
+   z-index: 1;
+   top: 1px;
+   left: 0px;
+
+}
+.morebutton:hover .dropdown-menu{
+    display:block;
+}
+.dropdown-item{
+    padding: 5px 0;
+}
+.action-btn{
+   
+    cursor: pointer;
+   color: #333;
+   
+}
+.action-btn:hover{
+    background-color: #f1f1f1;
+}

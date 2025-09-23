@@ -1,0 +1,14 @@
+body{
+    margin:0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(176, 246, 246);
+}
+.background{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}

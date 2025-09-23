@@ -1,0 +1,520 @@
+
+p{
+    font-weight: 300;
+}
+.bg-profile{
+    margin-top: 30px;
+    margin-bottom: 200px;
+    margin-left: 300px;
+    margin-right: 230px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(249, 249, 250);
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 14px;
+    width: 450px;
+    
+}
+.topbar{
+    padding-bottom: 10px;
+    display: flex;
+}
+.heading{
+ font-size: 14px;
+ font-weight:bold;
+ font-family:Roboto,Arial ; 
+ color: rgb(17, 17, 74);
+ margin-top: 10px;
+ width:150px;
+}
+.closebutton{
+  
+   margin-left: 310px;
+   
+    height: 20px;
+    border-width: 0px;
+    border-radius: 6px;
+    border-style: solid;
+     color: rgb(15, 15, 101);
+     background-color: rgb(198, 198, 243);
+     margin-top: 10px;
+}
+.img{
+    border-style: dashed;
+    border-width: 2px;
+    border-color: rgb(193, 189, 189);
+    border-radius: 5px;
+}
+.upload-icon{
+    height: 40px;
+    width: 40px;
+    margin-left: 225px;
+}
+.a{
+    margin-left: 200px;
+    font-size: 14px;
+    font-weight: 700;
+    color: blue;
+    margin-top: 0px;
+}
+.b{
+    margin-left: 200px;
+    font-size: 8px;
+    color: rgb(171, 170, 170);
+    margin-top: -5px;
+}
+.title{
+    display: flex;
+
+}
+.salutation-list{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-left: 20px;
+   
+    
+    border-color: rgb(157, 157, 157) ;
+    border-radius: 10px;
+    width: 85px;
+    border-style: solid;
+    border-width: 2px;
+}
+.sal{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 40px;
+   
+    padding-top: 5px;
+    display: inline-block;
+}
+.first{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 40px;
+    
+    padding-top: 5px;
+    display: inline-block;
+    
+}
+.last{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 30px;
+    margin-right: 50px;
+   
+    padding-top: 5px;
+    display: inline-block;
+}
+.firstnamebox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 15px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 90px;
+    border-style: solid;
+    margin-left: 25px;
+    border-width: 2px;
+}
+.lastnamebox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 15px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 90px;
+    border-style: solid;
+    margin-left: 25px;
+    border-width: 2px;
+}
+.emailbox{
+      padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 170px;
+    border-style: solid;
+    margin-left: 20px;
+    border-width: 2px;
+}
+.numberbox{
+      padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 170px;
+    border-style: solid;
+    margin-left: 30px;
+    border-width: 2px;
+}
+.num{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 40px;
+   
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 70px;
+}
+.email{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 40px;
+    margin-left: 20px;
+    
+    padding-top: 5px;
+    display: inline-block;
+}
+.dob{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 40px;
+   
+    padding-top: 5px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.gen{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 60px;
+    padding-right: 10px;
+   
+    padding-top: 5px;
+    margin-right: 60px;
+    display: inline-block;
+}
+.dobbox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 15px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 120px;
+    border-style: solid;
+    margin-left: 20px;
+    border-width: 2px;
+}
+.gender{
+    display: inline-block;
+    margin-left: 40px;
+}
+.course{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 40px;
+   
+    padding-top: 5px;
+    margin-left:20px ;
+    
+}
+.coursebox{
+      padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 405px;
+    border-style: solid;
+    margin-left: 20px;
+    border-width: 2px;
+}
+.addressbox{
+       padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 405px;
+    border-style: solid;
+    margin-left: 20px;
+    border-width: 2px;
+}
+.address{
+     font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 40px;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+.country{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+    padding-right: 40px;
+   
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.state{
+     font-size: 14px;
+    font-weight: 400;
+    
+    padding-right: 60px;
+    margin-left: 140px;
+   
+    padding-top: 5px;
+    display: inline-block;
+}
+.countrybox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 160px;
+    border-style: solid;
+    margin-left: 20px;
+    border-width: 2px;
+}
+.statebox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 170px;
+    border-style: solid;
+    margin-left: 8px;
+    border-width: 2px;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.city{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+    padding-right: 40px;
+   
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.pin{
+      font-size: 14px;
+    font-weight: 400;
+    padding-left: 90px;
+    padding-right: 60px;
+   
+    padding-top: 5px;
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 70px;
+}
+.citybox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 160px;
+    border-style: solid;
+    margin-left: 20px;
+    border-width: 2px;
+}
+.pinbox{
+     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    border-color: rgb(198, 196, 196) ;
+    border-radius: 10px;
+    width: 170px;
+    border-style: solid;
+    margin-left: 50px;
+    border-width: 2px;
+}
+.cancelbutton{
+    background-color: rgb(226, 223, 223);
+    width: 70px;
+   display: inline-block;
+    border-radius:5px;
+    margin-top: 30px;
+    margin-left:260px;
+    border-width: 0px;
+}
+.addemop{
+    background-color: rgb(29, 29, 239);
+    
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+    border-width: 0px;
+
+}
+
+.profile-border{
+    border-style: dashed;
+    border-width: 2px;
+    border-color: rgb(103, 102, 102);
+    border-radius: 5px;
+    width: 80px;
+    display: inline-block;
+     align-items: center;
+    
+}
+.profile-edit{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    padding: 5px;
+   
+
+}
+.change{
+    color: blue;
+    background-color: rgb(187, 187, 242);
+    border-width: 0px;
+    margin-top:10px;
+    align-items: center;
+    top: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 500;
+
+}
+.changebutton{
+    height:10px; 
+    width: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    
+
+}
+.save{
+    background-color: rgb(16, 16, 232);
+    
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+    border-width: 0px;
+
+}
+.add-employee{
+   visibility: hidden;
+    position:absolute;
+    top: 0px;
+    bottom:auto;
+    right: auto;
+    left: auto;
+    backdrop-filter: blur(8px);
+    z-index: 12;
+
+}
+.edit-employee{
+   visibility:hidden;
+   position: absolute;
+   top: 0px;
+   bottom: auto;
+   right: auto;
+   left: auto;
+   backdrop-filter: blur(8px);
+   z-index: 10;
+   
+
+}
+.deleteemp-bg{
+    height:125px;
+    width: 350px;
+    border-width: 0px;
+    border-radius: 15px;
+    border-color: black;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    background-color: white;
+}
+p{
+    font-family: Roboto,arial;
+}
+.del-header{
+    font-weight: 500;
+    font-size: 20px;
+    margin-left:10px;
+    display: inline-block;
+    color:rgb(33, 33, 148) ;
+   
+}
+.close-btn{border-radius: 5px;
+    border-width: 0px;
+    color: rgb(27, 27, 99);
+    margin-left: 150px;
+    margin-right: 10px;
+    display: inline-block;
+
+}
+.d{
+    margin-left: 15px;
+    font-size: 12px;
+    margin-top:-5px;
+    color: rgb(53, 53, 129);
+}
+.cancel-btn{
+    margin-left: 210px;
+    padding: 9px;
+    color: rgb(24, 24, 82);
+    border-radius: 9px;
+    border-width: 0px;
+}
+.delete-btn{
+    margin-left: 10px;
+    padding: 9px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    background-color: crimson;
+    color: white;
+    border-radius: 9px;
+    border-width: 0px;
+}
+.delete-employee{
+    position: absolute;
+     top:100px;
+   bottom: 0px;
+   right: 400px;
+   left: 400px;
+   backdrop-filter: blur(18px);
+   z-index: 10;
+   visibility: hidden;
+}

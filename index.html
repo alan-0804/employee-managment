@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>employee management system    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="gen.css">
+    <link rel="stylesheet" href="edit.css">
+    
+
+    
+</head>
+<body >
+    <div class="background">
+    
+    
+
+    <div class="sidebar">
+        <div  class="heading">
+            <h3><b>Employee</b></h3>
+            </div>
+            <div class="heading2">
+            Management
+        </div>
+    
+        <div class="sidebar-links">
+                <img class="dashborad-icon"src="Home.png">
+               <div> Dashboard</div>
+        </div>
+        <div class="sidebar-links">
+            
+                <img class="employee-icon"src="employee1.png">
+             <div> Employees </div>
+        </div>
+        <div class="sidebar-links">
+            
+                <img class="profile-icon"src="profile11.png">              
+                <div> Myprofile</div>
+        </div>
+        <div class="sidebar-links">
+            <img  class ="logout-icon"src="Locks.png">
+            <div >
+                Logout
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="left-section">
+        <div class="a-head">
+        Dashboard/Employees
+        </div>
+        <div class="b-head">Employees</div>
+        </div>
+         <div class="right-section">
+        <div class="searchbar">
+            <input type="text"class="searchbox" placeholder="search" id="searchbox">
+            <button class="search-button" id="search">
+                <img class="search-logo" src="search.png">
+            </button>
+        </div>
+        <div class="profile">
+            <img class="profile-pic" src="profile.png">
+
+        </div>
+
+         </div>
+    </div>
+    <div class="employee-details">
+        <div class="top bar">
+            <p class="table-header">
+                Employees 
+            </p>
+            <button class="employee-button" id="addemployee-btn">
+                Add Employee
+            </button>
+        </div>
+            <table class="maintable">
+              <thead>
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody id ="tablename">
+
+        </tbody>
+        </table>
+
+    </div>
+    <div id="pagination" class="pagination d-flex justify-content-end gap-3"> </div>
+
+<div class="add-employee" id="overlay">
+    <div class="bg-profile">
+<div class="topbar">
+    <p class="heading">Add Employee</p>
+    <button class="closebutton" id="closebtn">x</button>
+</div>
+<div class="img">
+    <img class="upload-icon"src="upload.svg">
+    <p class="a">Upload image </p>
+    <p class="b">PNG,JPG files are allowed</p>
+
+</div>
+<div class="titles">
+    <p class="sal">Salutation</p>
+    <p class="first" >First Name</p>
+    <p class="last" >Last Name</p>
+    <select class="salutation-list" id="salutation">
+     <option>mr</option>
+     <option>miss</option>   
+    </select>
+     <input type="text"class="firstnamebox" id="firstname" placeholder="john">
+      <input type="text"class="lastnamebox"  id="lastname" placeholder="geo">
+    <p class="email">Email Address</p>
+    <p class="num">mobile number</p>
+    <input type="text"class="emailbox" id="emailbox" placeholder="abcd@gmail.com">
+      <input type="text"class="numberbox" id="number" placeholder="enter mobile number">
+      <p class="dob">Date Of Birth</p>  
+      <p class="gen">Gender</p>        
+    <input type="date"class="dobbox" id="dob" placeholder="date of birth">
+    <div class="gender" id="gender">
+    <input type="radio" id="radio1" name="gender" value="Male">Male
+    <input type="radio" id="radio2" name="gender" value="Female">Female
+    </div>
+    <p class="course">Qualification</p>
+    <input type="text" class="coursebox" id="qualification" placeholder="enter qualification">
+    <p class="address" >Address</p>
+     <input type="text" class="addressbox"id="address" placeholder="enter the address ">
+     <p class="country">Country</p>
+     <p class="state">State</p>
+     <input type="text" class="countrybox"  id="country" placeholder="india ">
+    <input type="text" class="statebox" id="state" placeholder="delhi ">
+    <p class="city">City</p>
+    <p class="pin">Pin/Zip</p>
+    <input type="text" class="citybox" id="city" placeholder="kochi ">
+    <input type="text" class="pinbox" id="pin" placeholder="985423 ">
+    <button class="cancelbutton" id="cancelbtn">Cancel</button>
+    <button class="addemop" id="addemployeebtn">Add Employee</button>
+</div>
+    </div>
+</div>
+<div class="edit-employee">
+    <div class="bg-profile">
+<div class="topbar">
+    <p class="heading">Edit Employee</p>
+    <button class="closebutton" id="editclosebtn">x</button>
+</div>
+<div class="profile-border">
+    <img class="profile-edit" src="profile.jpg">
+</div>
+<div class="changebutton">
+  <button class="change">Change</button></div>
+<div class="titles">
+    <p class="sal">Salutation</p>
+    <p class="first">First Name</p>
+    <p class="last">Last Name</p>
+    <select class="salutation-list" id="edit-salutation">
+     <option>mr</option>
+     <option>miss</option>   
+    </select>
+     <input type="text"class="firstnamebox"id="edit-firstname">
+      <input type="text"class="lastnamebox" id="edit-lastname">
+    <p class="email">Email Address</p>
+    <p class="num">mobile number</p>
+    <input type="text"class="emailbox" id=".edit-email">
+      <input type="text"class="numberbox" id="edit-num">
+      <p class="dob">Date Of Birth</p>  
+      <p class="gen">Gender</p>        
+    <input type="date"class="dobbox" id="edit-dob">
+    <div class="gender">
+    <input type="radio"  id="edit-radio1" name="gender" value="Male">Male
+    <input type="radio"  id="edit-radio2" name="gender" value="Female">Female
+    </div>
+    <p class="course">Qualification</p>
+    <input type="text" class="coursebox" id="edit-course">
+    <p class="address">Address</p>
+     <input type="text" class="addressbox" id="edit-address">
+     <p class="country">Country</p>
+     <p class="state">State</p>
+     <input type="text" class="countrybox" id="edt-country" >
+    <input type="text" class="statebox" id="edit-state">
+    <p class="city">City</p>
+    <p class="pin">Pin/Zip</p>
+    <input type="text" class="citybox" id="edit-city ">
+    <input type="text" class="pinbox" id="edit-pin ">
+    <button class="editcancelbutton" id="cancelbtn">Cancel</button>
+    <button class="save" id="savebtn">Save Change</button>
+</div>
+    </div>
+    
+</div>
+
+<div class="delete-employee">
+    <div class="deleteemp-bg">
+        <p class="del-header">Delete Employee</p>
+        <button class="close-btn">x</button>
+        <p class="d">Are you sure you want to Delete the employee ? </p>
+        <button class="cancel-btn">cancel</button>
+        <button class="delete-btn">Delete</button>
+    </div>
+</div>
+<div class="empdetails">
+    <div class="empdetails-bg">
+        <img class="bg-pic-edit" src="backgroundpic.jpg">
+        <img class="profile-pic-edit" src="profile.jpg">
+        <div class="divname"><p class="name" id="detail-name">Mr.</p></div>
+        <div class="divemail"><p class="email" id="detail-email">alina 123@gmail.com</p></div>
+        <div class="degenderbox"><p class="boxheader">Gender</p>
+            <p class="detail" id="detail-gender">wd</p>
+        </div>
+        <div class="deagebox"><p class="boxheader">age</p>
+            <P class="detail" id="detail-age">dw</P>
+        </div>
+        <div class="dedobbox"><p class="boxheader">Date Of Brith</p>
+            <p class="detail" id="detail-dob">wd</p>
+        </div>
+        <div class="denumbox"><p class="boxheader">Mobile Number</p>
+        <p class="detail" id="detail-num">wd</p>
+        </div>
+        <div class="dequalificationbox"><p class="boxheader">Qualification</p>
+            <p class="detail" id="detail-qualification">d</p>
+        </div>
+        <div class="deaddressbox"><p class="boxheader">Address</p>
+            <P class="detail" id="detail-address">ed</P>
+        </div>
+        <div class="deusernamebox"><p class="boxheader"> username</p> 
+        <p class="detail" id="detail-username">2</p>
+        </div>
+        <button class="delete">Delete</button>
+        <button class="edit">Edit Details</button>
+    </div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
