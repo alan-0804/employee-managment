@@ -1,18 +1,12 @@
 let allEmployees = [];
 let currentpage = 0;
-const limit = 5;
+const limit =2;
 let filteredData = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     getEmployees();
 
-    document.getElementById("search").addEventListener("click", () => {
-        const query = document.getElementById("searchbox").value.toLowerCase();
-        filteredData = searchEmployees(query);
-        currentpage = 0;
-        renderEmployees(filteredData);
-        generatePaginationButtons(filteredData.length);
-    });
+   
 
 
 async function getEmployees() {
@@ -22,8 +16,9 @@ async function getEmployees() {
         allEmployees = data;
         filteredData = data;
         renderEmployees(filteredData);
-        generatePaginationButtons(filteredData.length);
-    } catch (error) {
+        generatePaginationButtons();
+    }
+     catch (error) {
         console.error('Error fetching employee data', error);
     }
 }
@@ -63,24 +58,25 @@ function renderEmployees(data) {
     });
 
     tablebody.innerHTML = rows;
+    attachMoreButtonEvents();
 }
 
-function generatePaginationButtons(totalItems) {
+function generatePaginationButtons() {
     const pagination = document.getElementById("pagination");
-    const totalPages = Math.ceil(totalItems / limit);
-    pagination.innerHTML = "";
+    const totalPages = Math.ceil(allEmployees.lenght / limit);
+    pagination.innerHTML = ""
 
     for (let i = 0; i < totalPages; i++) {
         const button = document.createElement("button");
-        button.textContent = i + 1;
+        button.textContent = i+1;
 
-        button.classList.add('btn', 'btn-outline-primary');
+        button.classList.add("btn","btn-outline-primary");
         
 
         button.addEventListener('click',() => {
             currentpage = i;
             renderEmployees(allEmployees);
-            generatePaginationButtons(allEmployees.length); // re-render to show active state
+           
         })
 
         pagination.appendChild(button);
@@ -94,6 +90,13 @@ function searchEmployees(query) {
         emp.email.toLowerCase().includes(query)
     );
 }
+ document.getElementById("search").addEventListener("click", () => {
+        const query = document.getElementById("searchbox").value.toLowerCase();
+        filteredData = searchEmployees(query);
+        renderEmployees(filteredData);
+        generatePaginationButtons();
+        
+    });
 
 document.getElementById("addemployee-btn").addEventListener("click",() => {
      const overlay = document.getElementById("overlay");
@@ -128,24 +131,7 @@ function formatData(input) {
     return `${dd}-${mm}-${yyyy}`;
 }
 
-function attachMoreButtonEvents() {
-    document.querySelectorAll(".more-button").forEach(button => {
-        button.addEventListener("click",function(e){
-            e.stopPropagation();
-            const menu = this.nextElementsibiling;
 
-            document.querySelectorAll("dropdown-menu").forEach(dropdown => {
-                if(dropdown !==menu)dropdown.classList.remove("show");
-            });
-            menu.classList.toggle("show")
-        });
-    });
-    document.addEventListener("click",() => {
-        document.querySelectorAll(".dropdown-menu").forEach(dropdown =>{
-            dropdown.classList.remove("show");
-        })
-    })
-}
 document.getElementById("addemployeebtn").addEventListener("click",() => {
 
     const employeeData={
@@ -180,6 +166,26 @@ document.getElementById("addemployeebtn").addEventListener("click",() => {
         formclose();
         getEmployees();
     })
+    })
+    function attachMoreButtonEvents() {
+    document.querySelectorAll(".more-button").forEach(button => {
+        button.addEventListener("click",function(e){
+            e.stopPropagation();
+            const menu = this.nextElementSibiling;
+
+            document.querySelectorAll(".dropdown-menu").forEach(dropdown => {
+                if(dropdown !== menu) dropdown.classList.remove("show");
+            });
+            menu.classList.toggle("show");
+        });
+    });
+    document.addEventListener("click",() => {
+        document.querySelectorAll(".dropdown-menu").forEach(dropdown =>{
+            dropdown.classList.remove("show");
+        })
+    })
+}
+
     function editEmployeeDetails(id){
          fetch(`http://localhost:3000/employees/${id}`,{
         method:"GET",
@@ -189,7 +195,8 @@ document.getElementById("addemployeebtn").addEventListener("click",() => {
     .then(response => response.json())
     .then(employee =>{
         const editOverlay = document.getElementById("overlayEdit")
-        editOverlay.style.display="flex"
+        editOverlay.style.visibility="visible";
+        editOverlay.style.opacity=1;
 
         document.getElementById("edit-salutation").value = employee.salutation;
         document.getElementById("edit-firstname").value = employee.firstName;
@@ -215,6 +222,10 @@ document.getElementById("addemployeebtn").addEventListener("click",() => {
 function formatData2(input) {
     const [dd, mm, yyyy] = input.split("-");
     return `${yyyy}-${mm}-${dd}`;
+}
+function editformclose(){
+     document.getElementById("overlayEdit").style.visibility="hidden";
+    document.getElementById("overlayEdit").style.opacity=0;
 }
 document.getElementById("editclosebtn").addEventListener("click",editformclose);
 document.getElementById("editcancelbtn").addEventListener("click",editformclose);
@@ -257,5 +268,86 @@ document.getElementById("savebtn").addEventListener("click",(e)=>{
     })
     .catch(error => console.error("Error:",error));
 })
+
+function deleteEmployee(id){
+     document.getElementById("delete-btn").setAttribute("data-id",id);
+
+    const deleteOverlay = document.getElementById("overlayDelete")
+    deleteOverlay.style.visibility="visible";
+    deleteOverlay.style.opacity="2";
+}
+ 
+function deleteformclose(){
+     document.getElementById("overlaydelete").style.opacity="0";
+     document.getElementById("overlaydelete").style.visibility="hidden";
+}
+
+document.getElementById("delcancelbtn").addEventListener("click",deleteformclose);
+document.getElementById("delclosbtn").addEventListener("click",deleteformclose);
+
+document.getElementById("delete-btn").addEventListener("click",(e)=>{
+    e.preventDefault();
+
+    const employeeId=e.target.getAttribute("data-id")
+
+    fetch(`http://localhost:3000/employees/${employeeId}`,{
+        method:"DELETE",
+
+    })
+    .then (response =>response.json())
+    .then(data=>{
+        console.log(data)
+
+        deleteformclose();
+        getEmployees();
+
+    })
+    
 })
+
+function viewEmpDetails(id){
+    fetch(`http://localhost:3000/employees/${id}`,{
+        method:"GET",
+        headers:{"content-Type":"application/json"},
+        body:JSON.stringify()
+    })
+    .then(response =>response.json())
+    .then(employee =>{
+
+        const detailOverlay = document.getElementById("overlayDetail")
+        detailOverlay.style.visibility="visible",
+        detailOverlay.style.opacity=1
+
+        document.getElementById("detail_name").innerText = `${employee.salutation} ${employee.firstName} ${employee.lastName}`
+        document.getElementById("detail-email").innerText=`${employee.email}`
+        document.getElementById("detail-gender").innerText = `${employee.gender}`
+        document.getElementById("detail-dob").innerText = `${employee.dob}`
+        document.getElementById("detail-phone").innerText = `${employee.phone}`
+        document.getElementById("detail-qualification").innerText = `${employee.qualifications}`
+        document.getElementById("detail-address").innerText = `${employee.address}`
+        document.getElementById("detail-username").innerText = `${employee.username}`
+        document.getElementById("detail-age").innerText = age()
+
+
+        document.getElementById("deleteempbtn").setAttribute("data-id",id);
+        document.getElementById("editempbtn").setAttribute("data-id",id);
+    })
+}
+function viewformclose(){
+    document.getElementById("overlayDetail").style.visibility="visible";
+    document.getElementById("overlayDetail").style.opacity=2;
+    
+}
+document.getElementById("deleteempbtn").addEventListener("click",(e) =>{
+    const employeeId = e.target.getAttribute("data-id")
+    viewformclose();
+    deleteEmployee(employeeId);
+})
+document.getElementById("editempbtn").addEventListener("click",(e)=>{
+    const employeeId = e.target.getAttribute("data-id")
+    viewformclose();
+    editEmployeeDetails(employeeId);
+})
+
+
 });
