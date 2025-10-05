@@ -12,3 +12,17 @@ body{
     bottom: 0px;
     right: 0px;
 }
+.pagination{
+    background-color: white;
+    margin-left: 950px;
+    border-width: 5px;
+    border-color: black;
+    margin-right: 5px;
+    display: inline-block;
+    
+}
+.dropdown{
+    background-color: blueviolet;
+    margin-left: 500px;
+    z-index: 5;
+}

@@ -83,21 +83,35 @@
               <thead>
             <tr>
                 <th>#</th>
+                <th>Image</th>
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Gender</th>
                 <th>DOB</th>
                 <th>Country</th>
+                <th>  </th>
             </tr>
         </thead>
         <tbody id ="tablename">
-
+            <tr>
+            <td>1</td>
+            <td></td>
+            <td>karthik</td>
+            <td>karthik8477@gmail.com</td>
+            <td>9027425676</td>
+            <td>Male</td>
+            <td>2000-03-09</td>
+            <td>india</td>
+            <td>
+               
+            </td>
+        </tr>
         </tbody>
         </table>
 
     </div>
-    <div id="pagination" class="pagination d-flex justify-content-end gap-3"> </div>
+    <div id="pagination" class="pagination"> </div>
 
 <div class="add-employee" id="overlay">
     <div class="bg-profile">
@@ -105,10 +119,11 @@
     <p class="heading">Add Employee</p>
     <button class="closebutton" id="closebtn">x</button>
 </div>
-<div class="img">
+<div class="uploadimg" id="upload-img">
     <img class="upload-icon"src="upload.svg">
     <p class="a">Upload image </p>
     <p class="b">PNG,JPG files are allowed</p>
+    <input id="imgUpload" type="file" class="upimg" accept="image/*">
 
 </div>
 <div class="titles">
@@ -149,7 +164,7 @@
 </div>
     </div>
 </div>
-<div class="edit-employee">
+<div class="edit-employee" id="overlayEdit">
     <div class="bg-profile">
 <div class="topbar">
     <p class="heading">Edit Employee</p>
@@ -172,7 +187,7 @@
       <input type="text"class="lastnamebox" id="edit-lastname">
     <p class="email">Email Address</p>
     <p class="num">mobile number</p>
-    <input type="text"class="emailbox" id=".edit-email">
+    <input type="text"class="emailbox" id="edit-email">
       <input type="text"class="numberbox" id="edit-num">
       <p class="dob">Date Of Birth</p>  
       <p class="gen">Gender</p>        
@@ -187,12 +202,12 @@
      <input type="text" class="addressbox" id="edit-address">
      <p class="country">Country</p>
      <p class="state">State</p>
-     <input type="text" class="countrybox" id="edt-country" >
+     <input type="text" class="countrybox" id="edit-country" >
     <input type="text" class="statebox" id="edit-state">
     <p class="city">City</p>
     <p class="pin">Pin/Zip</p>
-    <input type="text" class="citybox" id="edit-city ">
-    <input type="text" class="pinbox" id="edit-pin ">
+    <input type="text" class="citybox" id="edit-city">
+    <input type="text" class="pinbox" id="edit-pin">
     <button class="cancelbutton" id="editcancelbtn">Cancel</button>
     <button class="save" id="savebtn">Save Change</button>
 </div>
@@ -200,16 +215,16 @@
     
 </div>
 
-<div class="delete-employee">
+<div class="delete-employee" id="overlayDelete">
     <div class="deleteemp-bg">
         <p class="del-header">Delete Employee</p>
-        <button class="delclosebtn">x</button>
+        <button class="delclose-btn" id="delclosebtn">x</button>
         <p class="d">Are you sure you want to Delete the employee ? </p>
-        <button class="delcancelbtn">cancel</button>
-        <button class="delete-btn">Delete</button>
+        <button class="delcancel-btn" id="delcancelbtn">cancel</button>
+        <button class="deldelete-btn" id="delete-btn">Delete</button>
     </div>
 </div>
-<div class="empdetails">
+<div class="empdetails" id="overlayDetail">
     <div class="empdetails-bg">
         <img class="bg-pic-edit" src="backgroundpic.jpg">
         <img class="profile-pic-edit" src="profile.jpg">
@@ -225,7 +240,7 @@
             <p class="detail" id="detail-dob"></p>
         </div>
         <div class="denumbox"><p class="boxheader">Mobile Number</p>
-        <p class="detail" id="detail-num"></p>
+        <p class="detail" id="detail-phone"></p>
         </div>
         <div class="dequalificationbox"><p class="boxheader">Qualification</p>
             <p class="detail" id="detail-qualification"></p>
